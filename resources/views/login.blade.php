@@ -25,14 +25,21 @@
                 @enderror
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 position-relative">
                 <label for="password" class="form-label text-dark">Password</label>
-                <input type="password" class="form-control border rounded px-3 @error('password') is-invalid @enderror"
-                       id="password" name="password" required>
+                <div class="position-relative">
+                    <input type="password" class="form-control border rounded px-3 pe-5 @error('password') is-invalid @enderror"
+                           id="password" name="password" required>
+                    <button class="btn position-absolute end-0 top-50 translate-middle-y me-2 border-0 bg-transparent"
+                            type="button" onclick="togglePassword('password', 'eyesIcon')">
+                        <i class="bi bi-eye-slash" id="eyesIcon" ></i>
+                    </button>
+                </div>
                 @error('password')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
+
 
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="rememberme" name="rememberme">

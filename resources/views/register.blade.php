@@ -33,17 +33,26 @@
                 @enderror
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 position-relative">
                 <label for="password" class="form-label text-dark">Password</label>
-                <input type="password" class="form-control border rounded px-3" id="password" name="password" required >
-                @error('password')
-                <div class="text-danger">{{ $message }}</div>
-                @enderror
+                <div class="position-relative">
+                    <input type="password" class="form-control border rounded px-3 pe-5" id="password" name="password" required>
+                    <button class="btn position-absolute end-0 top-50 translate-middle-y me-2 border-0 bg-transparent"
+                            type="button" onclick="togglePassword('password', 'togglePasswordIcon')">
+                        <i class="bi bi-eye-slash" id="togglePasswordIcon"></i>
+                    </button>
+                </div>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 position-relative">
                 <label for="password_confirmation" class="form-label text-dark">Confirm Password</label>
-                <input type="password" class="form-control border rounded px-3" id="password_confirmation" name="password_confirmation" required>
+                <div class="position-relative">
+                    <input type="password" class="form-control border rounded px-3 pe-5" id="password_confirmation" name="password_confirmation" required>
+                    <button class="btn position-absolute end-0 top-50 translate-middle-y me-2 border-0 bg-transparent"
+                            type="button" onclick="togglePassword('password_confirmation', 'toggleConfirmPasswordIcon')">
+                        <i class="bi bi-eye-slash" id="toggleConfirmPasswordIcon"></i>
+                    </button>
+                </div>
             </div>
 
             <button type="submit" class="btn btn-dark w-100 py-2">Register</button>

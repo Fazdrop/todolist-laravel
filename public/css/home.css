@@ -1,0 +1,11 @@
+/* Background gradasi dari biru ke hijau */
+body {
+    background: linear-gradient(
+        to bottom,
+        #007bff,
+        #28a745
+    ); /* Biru ke hijau */
+    min-height: 100vh; /* Agar background penuh */
+    margin: 0;
+    padding: 0;
+}

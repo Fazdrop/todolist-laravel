@@ -7,6 +7,7 @@
     <title>To-Do List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 </head>
 <body class="bg-light">
     <div class="container py-5">
@@ -21,7 +22,7 @@
                 @endif
 
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h2 class="fw-bold">To-Do List: {{ Auth::user()->name }}</h2>
+                    <h2 class="fw-bold text-white" >To-Do List: {{ Auth::user()->name }}</h2>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit" class="btn btn-danger">Log Out</button>
